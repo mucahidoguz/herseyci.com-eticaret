@@ -21,7 +21,7 @@
       <h4 class="slogan">Biz de olmayan ürün üretilmemiştir.</h4>
     </div>
     <div class="menu">
-      <ul>
+      <ul class="navbarMenu">
         <li>Ana Sayfa</li>
         <li>Hakkımızda</li>
         <li> <a class="dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
@@ -296,6 +296,60 @@
   </section>
 
   <!-- STORE MAIN BİTİŞ -->
+
+  <!-- SEPET BAŞLANGIÇ -->
+  <div class="basket">
+    <div class="basketItems">
+      <i class="bi bi-x-circle" onclick="toggleModal()"></i>
+      <h2 class="basketTitle">SEPETİNİZ</h2>
+      <ul class="basketList">
+        <li class="basketListLi">
+          <img class="basketImg" src="/assets/images/ev tekstili/et1.jpg" width="100" height="100">
+          <div class="basketItemInfo">
+            <h3 class="itemName">Neomi</h3>
+            <span class="itemPrice">50 ₺</span> <br>
+            <button class="btn btn-danger px-3">Sil</button>
+          </div>
+          <div class="itemQuantity">
+            <button class="btnn">-</button>
+            <span class="mx-2">2</span>
+            <button class="btnn">+</button>
+          </div>
+        </li>
+        <li class="basketListLi">
+          <img class="basketImg" src="/assets/images/ev tekstili/et1.jpg" width="100" height="100">
+          <div class="basketItemInfo">
+            <h3 class="itemName">Neomi</h3>
+            <span class="itemPrice">50 ₺</span> <br>
+            <button class="btn btn-danger px-3">Sil</button>
+          </div>
+          <div class="itemQuantity">
+            <button class="btnn">-</button>
+            <span class="mx-2">2</span>
+            <button class="btnn">+</button>
+          </div>
+        </li>
+        <li class="basketListLi">
+          <img class="basketImg" src="/assets/images/ev tekstili/et1.jpg" width="100" height="100">
+          <div class="basketItemInfo">
+            <h3 class="itemName">Neomi</h3>
+            <span class="itemPrice">50 ₺</span> <br>
+            <button class="btn btn-danger px-3">Sil</button>
+          </div>
+          <div class="itemQuantity">
+            <button class="btnn">-</button>
+            <span class="mx-2">2</span>
+            <button class="btnn">+</button>
+          </div>
+        </li>
+      </ul>
+      <div class="pay">
+        <span class="fw-bold fs-4">Toplam : 500 ₺</span>
+        <button class="btn btn-primary my-3">ALIŞVERİŞİ TAMAMLA</button>
+      </div>
+    </div>
+  </div>
+  <!-- SEPET BİTİŞ -->
   <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </body>

@@ -11,6 +11,7 @@
   --black: #1c2a39;
   --gray: #5c6a79;
   --purple: #4c3db2;
+  --transition: all 250ms ease-in-out
 }
 
 /* NAVBAR */
@@ -34,7 +35,7 @@
   flex-direction: rows;
 }
 
-ul {
+.navbarMenu {
   list-style: none;
   display: flex;
   flex-direction: rows;
@@ -51,7 +52,7 @@ a {
   text-decoration: none;
 }
 
-ul :hover {
+.navbarMenu :hover {
   color: red;
   border-bottom: 2px solid;
 }
@@ -198,3 +199,124 @@ ul :hover {
 }
 
 /* FILTER */
+
+/* SEPET */
+
+.basket {
+  background-color: #5c6a7950;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: var(--transition)
+}
+
+.basket.active {
+  opacity: 1;
+  z-index: 999;
+}
+
+.basketItems {
+  width: 0px;
+  background-color: white;
+  height: 100%;
+  float: right;
+  position: relative;
+  transition: var(--transition);
+}
+
+.basket.active .basketItems {
+  width: 450px;
+}
+
+.basketItems .bi-x-circle {
+  position: absolute;
+  left: 8%;
+  top: 2%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bi-x-circle:hover {
+  color: red;
+}
+
+.basketTitle {
+  font-family: sans-serif;
+  margin-top: 20%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.basketList {
+  list-style-type: none;
+  padding: 0 10px;
+  max-height: 650px;
+  overflow-y: auto;
+}
+
+.basketListLi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.basketImg {
+  border-radius: 10%;
+}
+
+.basketImg:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.basketItemInfo {
+  width: 200px;
+  margin-left: 5%;
+}
+
+.basketItemInfo .itemName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.basketItemInfo .itemPrice {
+  font-size: 16px;
+}
+
+.itemQuantity {
+  width: 120px;
+}
+
+.btnn {
+  height: 25px;
+  width: 30px;
+  text-align: center;
+}
+
+.btnn:hover {
+  background-color: #5c6a79;
+  color: white;
+  font-weight: bold;
+}
+
+.itemQuantity span {
+  font-weight: bold;
+}
+
+.pay {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5%;
+}
+
+/* SEPET */
